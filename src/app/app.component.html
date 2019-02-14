@@ -1,0 +1,12 @@
+<input [(ngModel)]="input_a" type="text"> <br><br>
+<input [(ngModel)]="input_b" type="text"> <br><br>
+<button *ngIf="!editFlag" (click)="add()">Add</button>
+<button *ngIf="editFlag" (click)="update()"> Updaate</button> 
+<br>
+
+<div *ngFor="let i of data;let j=index">
+<ul>
+  {{i.name}}-{{i.name2}}<button (click)="del(j)">delete</button>
+  <button style="margin-left:50px" (click)="edit(j)" >edit</button>
+</ul>
+</div>
